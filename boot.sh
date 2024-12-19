@@ -11,16 +11,8 @@ echo -e "$ascii_art"
 echo "=> Omakub is for fresh Manjaro GNOME 24 or newer installations only!"
 echo -e "\nBegin installation (or abort with ctrl+c)..."
 
-# Init pacman
-sudo sed -i -e 's/#Color/Color/g' /etc/pacman.conf
-sudo sed -i -e 's/#ParallelDownloads = 5/ParallelDownloads = 10/g' /etc/pacman.conf
-sudo sed -i -e 's/pkg.tar.xz/pkg.tar/g' /etc/makepkg.conf
-sudo sed -i -e 's/pkg.tar.xz/pkg.tar/g' /etc/makepkg.conf
+source ~/.local/share/omakub/install/pacman.sh
 
-sudo pacman-mirrors --country Brazil
-sudo pacman -Syyuu --noconfirm
-
-#
 command -v yay >/dev/null 2>&1 || sudo pacman -S --noconfirm yay git
 yay -Syyuu --noconfirm
 

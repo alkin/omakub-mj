@@ -33,4 +33,4 @@ if $RUNNING_GNOME; then
   gsettings set org.gnome.desktop.session idle-delay 300
 fi
 
-source ~/.local/share/omakub/install/other.sh
+source ~/.local/share/omakub/install/custom.sh

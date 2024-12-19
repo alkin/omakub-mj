@@ -15,8 +15,9 @@ if [[ -n "$languages" ]]; then
       ;;
     Node.js)
       mise use --global node@lts
+      # Install npm, yarn, pnpm, bun
       yay -S --noconfirm npm yarn pnpm bun-bin
-
+      # Install global packages
       sudo npm install -g npm-check-updates license-checker @vue/cli
       ;;
     Go)
@@ -24,9 +25,8 @@ if [[ -n "$languages" ]]; then
       ;;
     PHP)
       yay -Sy --noconfirm php php-sqlite php-gd php-intl
-
+      # Install composer
       yay -S composer --needed --noconfirm
-
       # Enable php extensions
       sudo sed -i -E 's|;(extension.*sqlite.*)|\1|g' /etc/php/php.ini
       sudo sed -i -E 's|;(extension.*mysql.*)|\1|g' /etc/php/php.ini
