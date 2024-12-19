@@ -8,4 +8,4 @@ sleep 3 # ensure enough time for ulauncher to set defaults
 cp ~/.local/share/omakub/configs/ulauncher.json ~/.config/ulauncher/settings.json
 
 # Open on startup
-echo "ulauncher.desktop" >> ~/.config/autostart/ulauncher.desktop
+systemctl --user enable --now ulauncher.service
