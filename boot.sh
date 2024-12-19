@@ -19,7 +19,6 @@ sudo sed -i -e 's/pkg.tar.xz/pkg.tar/g' /etc/makepkg.conf
 
 sudo pacman-mirrors --country Brazil
 sudo pacman -Syyuu --noconfirm
-
 sudo pacman -S --noconfirm base-devel
 
 # Normal install
