@@ -18,7 +18,6 @@ sudo sed -i -e 's/pkg.tar.xz/pkg.tar/g' /etc/makepkg.conf
 sudo sed -i -e 's/pkg.tar.xz/pkg.tar/g' /etc/makepkg.conf
 
 sudo pacman-mirrors --country Brazil
-
 sudo pacman -Syyuu --noconfirm
 
 #

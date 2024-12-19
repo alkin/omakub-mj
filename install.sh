@@ -6,7 +6,6 @@ RUNNING_GNOME=$([[ "$XDG_CURRENT_DESKTOP" == *"GNOME"* ]] && echo true || echo f
 
 # Check the distribution name and version and abort if incompatible
 source ~/.local/share/omakub/install/check-version.sh
-source ~/.local/share/omakub/install/pacman.sh
 source ~/.local/share/omakub/install/terminal/required/app-gum.sh >/dev/null
 
 if $RUNNING_GNOME; then
