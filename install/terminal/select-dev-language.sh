@@ -15,15 +15,22 @@ if [[ -n "$languages" ]]; then
       ;;
     Node.js)
       mise use --global node@lts
+      yay -S --noconfirm yarn pnpm bun-bin
+      sudo npm install -g npm-check-updates license-checker @vue/cli
       ;;
     Go)
       mise use --global go@latest
       ;;
     PHP)
-      yay -Sy --noconfirm php
-      php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-      php composer-setup.php --quiet && sudo mv composer.phar /usr/local/bin/composer
-      rm composer-setup.php
+      yay -Sy --noconfirm php php-sqlite php-gd php-intl
+
+      yay -S composer --needed --noconfirm
+
+      # Enable php extensions
+      sudo sed -i -E 's|;(extension.*sqlite.*)|\1|g' /etc/php/php.ini
+      sudo sed -i -E 's|;(extension.*mysql.*)|\1|g' /etc/php/php.ini
+      sudo sed -i -E 's|;(extension.*gd.*)|\1|g' /etc/php/php.ini
+      sudo sed -i -E 's|;(extension.*intl.*)|\1|g' /etc/php/php.ini
       ;;
     Python)
       mise use --global python@latest

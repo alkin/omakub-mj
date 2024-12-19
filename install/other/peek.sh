@@ -1,0 +1,1 @@
+yay -S peek --needed --noconfirm

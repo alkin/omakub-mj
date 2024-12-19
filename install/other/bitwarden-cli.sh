@@ -1,0 +1,1 @@
+#yay -S bitwarden-cli --needed --noconfirm
