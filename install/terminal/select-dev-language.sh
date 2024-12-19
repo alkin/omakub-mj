@@ -15,7 +15,8 @@ if [[ -n "$languages" ]]; then
       ;;
     Node.js)
       mise use --global node@lts
-      yay -S --noconfirm yarn pnpm bun-bin
+      yay -S --noconfirm npm yarn pnpm bun-bin
+
       sudo npm install -g npm-check-updates license-checker @vue/cli
       ;;
     Go)
