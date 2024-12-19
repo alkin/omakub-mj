@@ -15,9 +15,9 @@ There is an Arch version for WSL2 on Windows, called [ArchWSL](https://github.co
 
 From a Terminal run:
 
-    wget -qO- https://raw.githubusercontent.com/akitaonrails/omakub-mj/stable/boot.sh | bash
+    wget -qO- https://raw.githubusercontent.com/alkin/omakub-mj/stable/boot.sh | bash
 
-And follow the instructions on screen. 
+And follow the instructions on screen.
 
 Pay attention because this procedure will install [Atuin - Magic History](https://atuin.sh/), and it will prompt you to either register or login.
 
@@ -25,7 +25,7 @@ Pay attention because this procedure will install [Atuin - Magic History](https:
 
 The original Omakub has a bug: Zellij's shortcuts don't play nice with NeoVim. Both share the same modifier "Ctrl". It's just not possible to navigate among Neovim's pane using "Ctrl + (h,j,j,l)", for example.
 
-In order to fix this, I merged the [Shoukoo's Zellij loves NeoVim](https://shoukoo.github.io/blog/zellij-love-neovim/) suggestion. 
+In order to fix this, I merged the [Shoukoo's Zellij loves NeoVim](https://shoukoo.github.io/blog/zellij-love-neovim/) suggestion.
 
 It makes Zellij slightly more cumbersome to use but it makes NeoVim work properly within Zellij.
 
